@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>Limber jQuery Tools - Draggable Demo</title>
+		<style type="text/css" media="screen">
+		
+		#simple-drag {
+			background: #00c;
+			cursor: move;
+			width: 100px;
+			height: 100px;
+		}
+		
+		#containment-holder {
+			border: 1px solid #000;
+			width: 300px;
+			height: 200px;
+		}
+		
+		#containment-drag {
+			background: #c00;
+			cursor: move;
+			width: 100px;
+			height: 100px;
+		}
+		
+		</style>
+		<script src="../../vendor/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../dist/limber-jquery.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		
+		$(function() {
+			$("#simple-drag").lj_draggable();
+			$("#containment-drag").lj_draggable({containment: 'parent'});
+		});
+		
+		</script>
+	</head>
+	<body>
+		<h1>Draggable Demo</h1>
+		<h2>Drag with containment</h2>
+		<div id="containment-holder">
+			<div id="containment-drag"></div>
+		</div>
+		<h2>Simple Drag</h2>
+		<div id="simple-drag"></div>
+	</body>
+</html>
