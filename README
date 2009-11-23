@@ -1,0 +1,5 @@
+Limber jQuery is a set of jQuery and Javascript extensions.
+The base of Limber jQuery is some core Javascript extensions (extensions to
+Arrays, Objects, Functions, Numbers...), but it's only the begging, the Limber
+jQuery wants to provide some high level widgets like dragable, lightbox,
+resizable and other kind of usefull libraries to support Javascript needs.
