@@ -77,8 +77,23 @@ describe 'Array extensions'
   
   describe 'rejecting data'
     it 'should reject data from array'
-      [1, 2, 3, 4, 5].reject(function(e) { return (e % 2) == 0 ? true : false; }).should.eql [2, 4]
+      [1, 2, 3, 4, 5].reject(function(e) { return (e % 2) == 0 ? true : false; }).should.eql [1, 3, 5]
     end
+  end
+  
+  describe 'selecting elements'
+    it 'should get only elements that passed in callback'
+      [1, 2, 3, 4, 5].select(function(e) { return (e % 2) == 0 ? true : false; }).should.eql [2, 4]
+    end
+  end
+  
+  describe 'partitioning elements'
+  	it 'should create a partition by callback'
+      var partition = [1, 2, 3, 4, 5].partition(function(e) { return (e % 2) == 0 ? true : false; })
+      
+      partition[0].should.eql [2, 4]
+      partition[1].should.eql [1, 3, 5]
+  	end
   end
   
   describe 'concatenating arrays'
