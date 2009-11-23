@@ -118,6 +118,7 @@ describe 'Array extensions'
       var y = [2, 3]
       
       x.zip(y, function(a, b) { return a + b; }).should.eql [3, 5, NaN]
+      y.zip(x, function(a, b) { return a + b; }).should.eql [3, 5]
     end
   end
 end
