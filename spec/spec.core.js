@@ -75,6 +75,12 @@ describe 'Array extensions'
     end
   end
   
+  describe 'rejecting data'
+    it 'should reject data from array'
+      [1, 2, 3, 4, 5].reject(function(e) { return (e % 2) == 0 ? true : false; }).should.eql [2, 4]
+    end
+  end
+  
   describe 'concatenating arrays'
     it 'should concatenate and return given array'
       var data = [1, 2];
