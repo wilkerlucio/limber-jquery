@@ -60,6 +60,13 @@ describe 'Array extensions'
     it 'should send the array keys at second argument'
       data.each(function(n, k) { expect(data[k]).should(be, n); })
     end
+    
+    it 'should start at a given index'
+      var sum = 0
+      data.each(function(n) { sum += n; }, 1)
+      
+      sum.should.be 5
+    end
   end
   
   describe 'zipping data'
