@@ -69,6 +69,21 @@ describe 'Array extensions'
     end
   end
   
+  describe 'injecting data'
+    it 'should inject data'
+      [1, 2, 3].inject(0, function(acc, n) { return acc + n; }).should.be 6
+    end
+  end
+  
+  describe 'concatenating arrays'
+    it 'should concatenate and return given array'
+      var data = [1, 2];
+      
+      data.concat([3, 4]).should.eql [1, 2, 3, 4]
+      data.should.eql [1, 2, 3, 4]
+    end
+  end
+  
   describe 'zipping data'
     it 'should make the join of data'
       var x = [1, 2, 3]
